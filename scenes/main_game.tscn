@@ -1,0 +1,24 @@
+[gd_scene load_steps=4 format=3 uid="uid://ci4v5rjkcnob3"]
+
+[ext_resource type="Script" path="res://scripts/main_game.gd" id="1_o2w3p"]
+[ext_resource type="Theme" uid="uid://cqfquicyyxou1" path="res://themes/main_game.tres" id="2_ndmca"]
+[ext_resource type="Texture2D" uid="uid://dlqigp5dvpc5r" path="res://sprites/main_background.jpg" id="2_r1k3k"]
+
+[node name="MainGame" type="Node2D"]
+script = ExtResource("1_o2w3p")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(960, 540)
+scale = Vector2(0.274286, 0.336344)
+texture = ExtResource("2_r1k3k")
+
+[node name="ButtonNewAntColony" type="Button" parent="."]
+z_index = 4096
+offset_left = 1717.0
+offset_top = 932.0
+offset_right = 1865.0
+offset_bottom = 963.0
+theme = ExtResource("2_ndmca")
+text = "Novo Robo"
+
+[connection signal="pressed" from="ButtonNewAntColony" to="." method="_on_button_new_ant_colony_pressed"]
