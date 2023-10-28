@@ -30,3 +30,4 @@ func _on_button_button_up():
 	drop_position.queue_free()
 	scale = initial_scale
 	global_position = initial_position
+	z_index = 8
