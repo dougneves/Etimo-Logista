@@ -13,7 +13,6 @@ scale = Vector2(0.274286, 0.336344)
 texture = ExtResource("2_r1k3k")
 
 [node name="ButtonNewAntColony" type="Button" parent="."]
-z_index = 4096
 offset_left = 1717.0
 offset_top = 932.0
 offset_right = 1865.0

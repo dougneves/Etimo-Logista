@@ -1,10 +1,22 @@
 extends Node2D
 
+@export var texture:Texture = null
+
 var picked_up = false
 var drop_position = Node2D.new()
 var initial_position = Vector2.ZERO
 var mouse_offset = Vector2.ZERO
 var initial_scale = Vector2.ZERO
+
+func _ready():
+	$Sprite2D.texture = self.texture
+	var button = Button.new()
+	button.set_anchors_preset(Control.PRESET_FULL_RECT)
+	button.set_position(-texture.get_size()/2)
+	button.modulate = Color(1,1,1,0)
+	button.connect("button_down", _on_button_button_down)
+	button.connect("button_up", _on_button_button_up)
+	$Sprite2D.add_child(button)
 
 func _process(delta):
 	if picked_up:
